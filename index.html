@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Fotball</title>
+</head>
+<body class="startSida">
+    <header id="header">
+        <nav class="start-nav">
+            <div class="logostart"><p>Football </p><p class="logoBg"> Fun</p> </div>
+            <ul class="start-page">
+                <a><li>About us</li></a>
+                <a><li>Skip</li></a>
+                <a><li>Quiz</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="line"></div>
+<div class="timeline" id="timelinelink">
+    <!-- varje div med class "box" är en del av händelser-->
+    <div class="box show">
+        <img src="img/englandflag.png" alt="england flag">
+        <div class="box-content o">
+        <h2>1863</h2>
+        <p>The modern football was invented</p>
+        </div>
+    </div>
+    <div class="box show">
+        <div class="box-content e">
+        <h2>1930</h2>
+        <p>First FIFA World Cup</p>
+        </div>
+        <img src="img/firstWC.jpeg" alt="Péle vs Sweden">
+    </div>
+    <div class="box show">
+        <img src="img/CL.jpg" alt="Champions League logo">
+        <div class="box-content o">
+        <h2>1955</h2>
+        <p>Champions League was founded</p>
+        </div> 
+    </div>
+    <div class="box show">
+        <div class="box-content e">
+            <h2>1930</h2>
+            <p>First FIFA World Cup</p>
+         </div>
+        <img src="img/firstWC.jpeg" alt="Péle vs Sweden"> 
+    </div>
+    <div class="box show">
+        <img src="img/CL.jpg" alt="Champions League logo">
+        <div class="box-content o">
+            <h2>1955</h2>
+            <p>Champions League was founded</p>
+        </div>
+    </div>
+    <div class="box show">
+        <div class="box-content e">
+            <h2>1930</h2>
+            <p>First FIFA World Cup</p>
+         </div>
+        <img src="img/firstWC.jpeg" alt="Péle vs Sweden"> 
+    </div>
+    <div class="box show">
+        <img src="img/CL.jpg" alt="Champions League logo">
+        <div class="box-content o">
+            <h2>1955</h2>
+            <p>Champions League was founded</p>
+        </div>
+    </div>
+    <div class="box show">
+        <div class="box-content e">
+            <h2>1930</h2>
+            <p>First FIFA World Cup</p>
+         </div>
+        <img src="img/firstWC.jpeg" alt="Péle vs Sweden"> 
+    </div>
+    <div class="box show">
+        <img src="img/CL.jpg" alt="Champions League logo">
+        <div class="box-content o">
+            <h2>1955</h2>
+            <p>Champions League was founded</p>
+        </div>
+    </div>
+    <div class="box show">
+        <div class="box-content e">
+            <h2>1930</h2>
+            <p>First FIFA World Cup</p>
+         </div>
+        <img src="img/firstWC.jpeg" alt="Péle vs Sweden"> 
+    </div>
+    <div class="box show">
+        <img src="img/CL.jpg" alt="Champions League logo">
+        <div class="box-content o">
+            <h2>1955</h2>
+            <p>Champions League was founded</p>
+        </div>
+    </div>
+    <div class="box show">
+        <div class="box-content e">
+            <h2>1930</h2>
+            <p>First FIFA World Cup</p>
+         </div>
+        <img src="img/firstWC.jpeg" alt="Péle vs Sweden"> 
+    </div>
+</div>
+ 
+    <nav class="start-nav-nere"> 
+        <a href="quiz.html">Quiz</a>
+        <a href="FCB.html">FCB page</a>
+        <a href="#timelinelink">Timeline</a>
+    </nav>
+
+    <script> 
+    // Code for start picture fade out
+    const bg = document.getElementById('header');
+        window.addEventListener('scroll', function(){
+         // bg.style.backgroundSize = 100 - +window.pageYOffset/800+'%';
+          bg.style.opacity = 1 - +window.pageYOffset/500+'';
+        })
+
+    const boxes = document.querySelectorAll('.box');
+
+    //code for the animated timeline
+    window.addEventListener('scroll', checkBoxes);
+
+    checkBoxes();
+
+    function checkBoxes() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        boxes.forEach(box => {
+           const boxTop = box.getBoundingClientRect().top;
+
+           if (boxTop < triggerBottom) {
+                box.classList.add('show');
+           } else {
+            box.classList.remove('show');
+           }
+    });
+    }
+        </script>
+</body>
+</html>

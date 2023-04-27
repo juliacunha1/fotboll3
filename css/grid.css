@@ -1,0 +1,31 @@
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: minmax(40px, auto);
+}
+/* placering av header*/
+header{
+    grid-column: 1/ -1;
+    grid-row: 1/ 2;
+}
+/* barcelona section placering*/
+.sectionFcb{
+    grid-column: 1/ -1;
+}
+
+.index section{
+    grid-column: 1/ -1;
+}
+
+.index {
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
