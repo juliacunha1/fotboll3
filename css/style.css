@@ -44,17 +44,21 @@ header{
 }
 /* ändrar storlekar för att passa mobil enheter */
 @media only screen and (max-width: 530px) {
-    section img{
+    .sectionFcb img{
         width: 200px;
         float: center;
         height: 150px;
     }
-    section p{
+    .sectionFcb p{
         font-size: 12px;
     }
-    section{
+    .sectionFcb{
         padding: 15px;
         margin: 20px;
+    }
+    header{
+        font-size: 50px;
+        padding-top: 50px;
     }
 }
 
@@ -206,19 +210,6 @@ header{
 .boxnoscript{
     transform: translateX(0);
 }
-/* färger*/
-.blue{
-    background-color: blue;
-}
-.red{
-    background-color: red;
-}
-.yellow{
-    background-color: yellow;
-}
-.green{
-    background-color: green;
-}
 /* div elementet där timeline ska visas*/
 .timeline{
     box-sizing: border-box;
@@ -276,6 +267,9 @@ header{
     padding-left: 15px;
     padding-right: 15px;
 }
+.start-page a{
+    text-decoration: none;
+}
 /* knappar till höger i nav*/
 .start-page{
     display: flex;
@@ -313,7 +307,9 @@ header{
 
 @media only screen and (max-width: 800px){
     #header{
-        background: url(../img/header.2.jpeg);
+        background: url(../img/header.3.jpg);
+        background-size: cover;
+        background-position-x: center;
     }
     .logostart{
         font-size: 18px;
@@ -348,14 +344,123 @@ header{
     }
 }
 
-.backToStart{
-    position: absolute;
-    float: left;
-    top: 0;
-}
+/* navbar längst ner på startsidan*/
 .start-nav-nere{
     width: -webkit-fill-available;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    box-shadow: 0px 0px 40px white;    
+}
+/* styling för länkarna, och på hover*/
+.start-nav-nere a{
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 0px 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+.start-nav-nere a:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(26, 118, 138);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+}
+.start-nav-nere a:hover:after{
+    width: 100%;
+    transition: 0.3s linear;
+}
+.start-nav-nere a:hover{
+    text-shadow: 6px 2px 5px rgb(26, 118, 138);
+}
+@media only screen and (max-width: 670px){
+    .start-nav-nere{
+        box-shadow: 0px 0px 20px white;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .start-nav-nere a{
+        padding: 0 5px;
+        font-size: 14px;
+        margin: 10px;
+    }
+    #aboutUs{
+        font-size: 24px;
+    }
+}
+/* styling for about us info längst ner på startsidan*/
+.AbUsSection{
+    margin: 200px 40px 40px 40px;
+    color: white;
+    letter-spacing: 1px;
+}
+#aboutUs{
+    font-size: 42px;
+    text-shadow: -10px -5px 10px rgb(43, 87, 156);
+}
+
+/* background styling for the credits page*/
+.creditsPage{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+/* putting the content in front of backgrund + styling w flex of each section*/ 
+.zIndex5 header{
+    z-index: 5;
+    font-size: 52px;
+}
+.creditSection{
+    margin: 40px 0px 40px 0px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* size of text and picture on credti page*/
+.creditSection img{
+    height: 200px;
+}
+.creditSection p{
+    font-size: 32px;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .creditSection img{
+        height: 100px;
+    }
+    .creditSection p{
+        font-size: 20px;
+    }
+}
+/* go back to index page link on top of other pages, FCB and Credits*/
+.goBack{
+    top: 0;
+    float: left;
+    margin: 10px;
+    color: white;
+    position: absolute;
+    z-index: 6;
+}
+.goBack a{
+    text-decoration: underline;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
 }

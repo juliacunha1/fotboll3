@@ -12,9 +12,9 @@
         <nav class="start-nav">
             <div class="logostart"><p>Football </p><p class="logoBg"> Fun</p> </div>
             <ul class="start-page">
-                <a><li>About us</li></a>
-                <a><li>Skip</li></a>
-                <a><li>Quiz</li></a>
+                <a href="#aboutUs"><li>About us</li></a>
+                <a href="credits.html"><li>Credits</li></a>
+                <a href="quiz.html"><li>Quiz</li></a>
             </ul>
         </nav>
     </header>
@@ -111,8 +111,16 @@
         <a href="quiz.html">Quiz</a>
         <a href="FCB.html">FCB page</a>
         <a href="#timelinelink">Timeline</a>
+        <a href="credits.html">Credits</a>
     </nav>
+<section class="AbUsSection">
+    <h2 id="aboutUs">About us:</h2>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ligula lorem, malesuada eu libero at, pretium tristique augue. Nunc convallis risus egestas dolor pretium ornare. Curabitur nisi libero, pharetra ac tempus ullamcorper, viverra nec nisi. Ut eu elementum lectus, non euismod libero. Vestibulum nec lacus gravida, gravida dolor in, malesuada justo. Pellentesque sit amet enim eget justo imperdiet fringilla vitae non arcu.
+         Phasellus at vulputate dui.</p><br>
 
+       <p> Mauris suscipit consequat dolor a egestas. Quisque magna ex, condimentum vitae lorem non, lacinia sagittis risus. Curabitur massa felis, cursus ac dignissim vel, consectetur ac justo. Mauris dignissim et arcu eu tincidunt. Ut augue lectus, suscipit vitae egestas id, pretium vitae justo. Class aptent taciti</p>
+</section>
     <script> 
     // Code for start picture fade out
     const bg = document.getElementById('header');
@@ -121,9 +129,11 @@
           bg.style.opacity = 1 - +window.pageYOffset/500+'';
         })
 
-    const boxes = document.querySelectorAll('.box');
 
     //code for the animated timeline
+
+    const boxes = document.querySelectorAll('.box');
+
     window.addEventListener('scroll', checkBoxes);
 
     checkBoxes();

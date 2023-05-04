@@ -22,10 +22,22 @@ header{
     align-items: center;
     justify-content: center;
 }
-
+/* timeline on startpage*/
 .timeline{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+/* position for each section credit page*/
+@media only screen and (min-width: 1000px){
+    .creditSection:nth-of-type(odd){
+        grid-column: 1/ 7;
+    }
+    .creditSection:nth-of-type(even){
+        grid-column: 7/ 13;
+    }    
+}
+.creditSection {
+    grid-column: 1/ -1;
 }
